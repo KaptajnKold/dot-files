@@ -10,24 +10,8 @@ function color_my_prompt {
 }
 color_my_prompt
 
-export PATH=/usr/local/bin:$PATH
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-export PATH=$PATH:/usr/local/mysql/bin/
-export PATH=$PATH:~/bin:~/scripts/
-export PATH=/usr/local/git/bin:$PATH
-export PATH=$PATH:~/go/bin
-PATH=$PATH:/usr/local/sbin
-
-# Oracle Instant Client
-export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:~/instantclient_10_2
-
 export CLICOLOR="YES"
-# export LSCOLORS="Dxfxcxdxbxegedabagacad"
 export HISTFILESIZE=10000 # the bash history should save 10000 commands
-export MAVEN_OPTS='-Xms256m -Xmx500m'
-# export MANPATH=/usr/local/git/man:$MANPATH
-export EDITOR=vim
-export VISUAL=vim
 
 export GOPATH=~/go
 
@@ -35,6 +19,5 @@ export GOPATH=~/go
 alias la="ls -la"
 alias ll="ls -l"
 alias l="ls"
-alias serve="python -m SimpleHTTPServer"
-export RBENV_ROOT=/usr/local/var/rbenv
+
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
