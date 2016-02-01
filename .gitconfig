@@ -1,0 +1,51 @@
+[core]
+	excludesfile = /Users/adam/.gitignore_global
+  quotepath = false
+[user]
+  email = adamlett@gmail.com
+  name = Adam Lett
+[difftool "Kaleidoscope"]
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[diff]
+  tool = Kaleidoscope
+[difftool]
+  prompt = false
+[mergetool "Kaleidoscope"]
+  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+  trustExitCode = true
+[mergetool]
+  prompt = false
+[merge]
+  tool = Kaleidoscope
+	ff = only
+[color]
+  ui = auto
+[alias]
+  c = commit -m
+  a = add
+  aa= add --all
+  st = status
+  ci = commit
+  d = diff
+  dc = diff --cached
+  cob = checkout -b
+  up = !git fetch origin && git rebase origin/master
+  ir = !git rebase -i origin/master
+  done = !git fetch && git rebase origin/master && git checkout master && git merge @{-1} && rake && git push
+  su = !git stash --keep-index --include-untracked
+  # Fancy logging.
+  #   h = head
+  #   hp = head with patch
+  #   r = recent commits, only current branch
+  #   ra = recent commits, all reachable refs
+  #   l = all commits, only current branch
+  #   la = all commits, all reachable refs
+  head = !git l -1
+  h = !git head
+  hp = "!. ~/.githelpers && show_git_head"
+  r = !git l -30
+  ra = !git r --all
+  l = "!. ~/.githelpers && pretty_git_log"
+  la = !git l --all
+[push]
+	default = simple
