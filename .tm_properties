@@ -1,0 +1,14 @@
+softWrap         = false
+softTabs         = true
+tabSize          = 4
+
+[ *.coffee, *.coffee.erb ]
+tabSize          = 8
+softTabs         = false
+
+[ *.{html,rb,scss}, *.html ]
+tabSize          = 2
+softTabs         = true
+
+[ *.{txt,md} ]
+softWrap         = true
