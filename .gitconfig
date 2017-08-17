@@ -17,7 +17,7 @@
   prompt = false
 [merge]
   tool = Kaleidoscope
-	ff = only
+  ff = only
 [color]
   ui = auto
 [alias]
@@ -48,4 +48,4 @@
   l = "!. ~/.githelpers && pretty_git_log"
   la = !git l --all
 [push]
-	default = simple
+  default = simple
