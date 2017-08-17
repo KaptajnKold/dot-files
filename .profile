@@ -15,8 +15,8 @@ export HISTFILESIZE=10000 # the bash history should save 10000 commands
 
 export GOPATH=~/go
 
-#Aliases
-alias la="ls -la"
+# Aliases
+alias la="ls -lah"
 alias ll="ls -l"
 alias l="ls"
 
