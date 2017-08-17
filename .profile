@@ -10,8 +10,36 @@ function color_my_prompt {
 }
 color_my_prompt
 
+# Source secrets
+source ~/Dropbox/dotfiles/.tokens
+
+# Source environment local to this machine
+if [[ -f ~/.local_env ]]; then
+    source ~/.local_env
+fi
+
+# Source environment related to my employer
+if [[ -z $WORK_DIR ]] && [[ -f $WORK_DIR/.env ]]; then
+  source $WORK_DIR/.env
+fi
+
+export PATH=~/scripts:~/bin:$PATH
+export CDPATH=~/br:~/~go/src:$CDPATH
+
+export EDITOR="mate -w"
+
 export CLICOLOR="YES"
-export HISTFILESIZE=10000 # the bash history should save 10000 commands
+
+HOMEBREW_NO_ANALYTICS=1
+
+# Avoid duplicates
+export HISTCONTROL=ignoredups:erasedups
+# When the shell exits, append to the history file instead of overwriting it
+shopt -s histappend
+
+HISTFILESIZE=10000000
+HISTSIZE=10000000
+PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 
 export GOPATH=~/go
 
@@ -19,5 +47,7 @@ export GOPATH=~/go
 alias la="ls -lah"
 alias ll="ls -l"
 alias l="ls"
+function mcd() { mkdir -p $1 && cd $1 }
+function cdf() { cd *$1*/ }
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
