@@ -47,7 +47,5 @@ export GOPATH=~/go
 alias la="ls -lah"
 alias ll="ls -l"
 alias l="ls"
-function mcd() { mkdir -p $1 && cd $1 }
-function cdf() { cd *$1*/ }
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
