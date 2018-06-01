@@ -49,3 +49,5 @@ alias ll="ls -l"
 alias l="ls"
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
