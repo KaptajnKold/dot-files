@@ -11,11 +11,11 @@ function color_my_prompt {
 color_my_prompt
 
 # Source secrets
-source ~/Dropbox/dotfiles/.tokens
+source $HOME/Dropbox/dotfiles/.tokens
 
 # Source environment local to this machine
-if [[ -f ~/.local_env ]]; then
-    source ~/.local_env
+if [[ -f $HOME/.local_env ]]; then
+    source $HOME/.local_env
 fi
 
 # Source environment related to my employer
@@ -41,7 +41,7 @@ HISTFILESIZE=10000000
 HISTSIZE=10000000
 PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 
-export GOPATH=~/go
+export GOPATH=$HOME/go
 
 # Aliases
 alias la="ls -lah"
