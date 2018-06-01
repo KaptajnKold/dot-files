@@ -1,14 +1,37 @@
+TM_RUBY = "$HOME/.rbenv/shims/ruby"
+PATH = "$HOME/.rbenv/bin:$PATH"
+
 softWrap         = false
 softTabs         = true
 tabSize          = 4
 
-[ *.coffee, *.coffee.erb ]
+[ *.{coffee,coffee.erb} ]
 tabSize          = 8
 softTabs         = false
 
-[ *.{html,rb,scss}, *.html ]
+[ source.ruby ]
+tabSize          = 2
+softTabs         = true
+
+[ *.{html,html.erb} ]
+tabSize          = 2
+softTabs         = true
+
+[*.{scss,scss.erb} ]
 tabSize          = 2
 softTabs         = true
 
 [ *.{txt,md} ]
 softWrap         = true
+
+[ *.haml ]
+tabSize          = 4
+softTabs         = false
+
+[ *.yaml ]
+softTabs         = true
+tabSize          = 2
+
+[ *.go ]
+softTabs         = false
+tabSize          = 4
