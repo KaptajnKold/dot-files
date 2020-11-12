@@ -13,25 +13,25 @@ softTabs         = false
 tabSize          = 2
 softTabs         = true
 
-[ *.{html,html.erb} ]
+[ text.html ]
 tabSize          = 2
 softTabs         = true
 
-[*.{scss,scss.erb} ]
+[ source.scss ]
 tabSize          = 2
 softTabs         = true
 
 [ *.{txt,md} ]
 softWrap         = true
 
-[ *.haml ]
+[ text.haml ]
 tabSize          = 4
 softTabs         = false
 
-[ *.yaml ]
+[ source.yaml ]
 softTabs         = true
 tabSize          = 2
 
-[ *.go ]
+[ source.go ]
 softTabs         = false
 tabSize          = 4
