@@ -42,3 +42,6 @@ spellingLanguage = 'en'
 [ source.coffee ]
 tabSize          = 8
 softTabs         = false
+
+[ comment ]
+spellChecking    = true
