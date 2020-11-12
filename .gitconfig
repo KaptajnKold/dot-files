@@ -50,3 +50,8 @@
   svn-up = !git svn fetch && git svn rebase
 [push]
   default = simple
+
+# If we're in a work related git repo, include extended config
+# (for setting the email address to my work email)
+[includeIf "gitdir:$WORK_DIR/"]
+  path = $WORK_DIR/.gitconfig
