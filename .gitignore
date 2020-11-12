@@ -1,4 +1,4 @@
 # These are secret!
 .tokens
 
-.irb_history
+.*_history
