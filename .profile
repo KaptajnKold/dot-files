@@ -28,7 +28,12 @@ else
     echo "No work dir set up on this machine or no work environment overrides."
 fi
 
-export PATH=$HOME/scripts:$HOME/bin:$PATH
+export PATH=$HOME/scripts:$HOME/bin:$HOME/go/bin:$PATH
+
+export PATH="/usr/local/sbin:$PATH"
+
+# Use gnu tools installed via Homebrew, unprefixed. E.g. grep instead of ggrep
+export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
 
 export EDITOR="mate -w"
 
