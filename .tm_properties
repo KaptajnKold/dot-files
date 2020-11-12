@@ -1,3 +1,6 @@
+# See here for documentation:
+# https://gist.github.com/dvessel/1478685
+
 TM_RUBY = "$HOME/.rbenv/shims/ruby"
 PATH = "$HOME/.rbenv/bin:$PATH"
 
