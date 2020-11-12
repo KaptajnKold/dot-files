@@ -1,6 +1,7 @@
 TM_RUBY = "$HOME/.rbenv/shims/ruby"
 PATH = "$HOME/.rbenv/bin:$PATH"
 
+include          = "{$include,.env*,.*.yml}"
 
 [ source.ruby ]
 tabSize          = 2
