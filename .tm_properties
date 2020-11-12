@@ -2,6 +2,7 @@ TM_RUBY = "$HOME/.rbenv/shims/ruby"
 PATH = "$HOME/.rbenv/bin:$PATH"
 
 include          = "{$include,.env*,.*.yml}"
+excludeInFolderSearch = "{$excludeInFolderSearch,dist,node_modules,log,**/target,tmp}"
 
 [ source.ruby ]
 tabSize          = 2
