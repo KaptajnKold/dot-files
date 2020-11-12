@@ -1,3 +1,5 @@
+# Customize prompt
+# YYYY-MM-DD HH:MM:SS user@host ~/cwd (current-git-branch) $
 function color_my_prompt {
     local __user_and_host="\[\033[01;32m\]\u@\h"
     local __cur_location="\[\033[01;34m\]\w"
