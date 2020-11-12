@@ -35,3 +35,9 @@ tabSize          = 2
 [ source.go ]
 softTabs         = false
 tabSize          = 4
+
+[ *.da.* ]
+spellingLanguage = 'da'
+
+[ *.en.* ]
+spellingLanguage = 'en'
