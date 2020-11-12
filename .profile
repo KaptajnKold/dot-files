@@ -17,11 +17,15 @@ source $HOME/Dropbox/dotfiles/.tokens
 # Source environment local to this machine
 if [[ -f $HOME/.local_env ]]; then
     source $HOME/.local_env
+else
+    echo "No local environment overrides."
 fi
 
 # Source environment related to my employer
 if [[ -z $WORK_DIR ]] && [[ -f $WORK_DIR/.env ]]; then
   source $WORK_DIR/.env
+else
+    echo "No work dir set up on this machine or no work environment overrides."
 fi
 
 export PATH=$HOME/scripts:$HOME/bin:$PATH
