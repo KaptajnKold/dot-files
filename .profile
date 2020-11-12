@@ -24,7 +24,6 @@ if [[ -z $WORK_DIR ]] && [[ -f $WORK_DIR/.env ]]; then
 fi
 
 export PATH=$HOME/scripts:$HOME/bin:$PATH
-export CDPATH=.:$HOME/br:$HOME/$HOMEgo/src:$CDPATH
 
 export EDITOR="mate -w"
 
